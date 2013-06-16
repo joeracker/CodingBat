@@ -1,0 +1,1 @@
+These are my responses to the CodingBat site's python coding excercises available at http://codingbat.com/.
