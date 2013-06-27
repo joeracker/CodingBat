@@ -33,8 +33,8 @@ def get_links(url, cookie, url_contains):
     return list(set(links_list))
 
 def get_solution(url, cookie):
-    print('> Downloading solution for problem ' + url)
-    #time.sleep(1)
+    print('> Getting solution for problem ' + url)
+    time.sleep(1)
     cookies = dict(JSESSIONID=jsessionid)
     r = requests.get(url, cookies=cookies)
     soup = BeautifulSoup(r.text)
