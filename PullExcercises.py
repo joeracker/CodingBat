@@ -9,7 +9,7 @@
 
 import requests, re, time
 import pprint
-from bs4 import BeautifulSoup, SoupStrainer, Tag
+from bs4 import BeautifulSoup
 
 jsessionid = 'DDF207B498934A8E06F3134D0EB66A9D'
 base_url = 'http://codingbat.com'
@@ -55,7 +55,7 @@ for i in range(len(section_urls)):
     # we want to create a new file here
     file_name = section_urls[i].replace('/python/', '') + '.py'
     print('Opening file ' + file_name + ' ==================')
-    fo = open(file_name, "wb")
+    fo = open('solutions/' + file_name, "wb")
 
     fo.write("=============================================\n")
     fo.write(file_name)
@@ -68,5 +68,5 @@ for i in range(len(section_urls)):
     fo.close()
     i =+ 1
     # For dev purposes, lets set a limit to not overwhelm server
-    if i == 100:
+    if i == 1:
         break
