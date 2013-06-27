@@ -57,8 +57,8 @@ for i in range(len(section_urls)):
     print('Opening file ' + file_name + ' ==================')
     fo = open('solutions/' + file_name, "wb")
 
-    fo.write("=============================================\n")
-    fo.write(file_name)
+    fo.write("# =============================================\n")
+    fo.write("# " + file_name + "\n")
     problem_list = get_links(base_url+section_urls[i], jsessionid, '/prob/')
     for n in range(len(problem_list)):
         print('+ Writing problem ' + str(n+1))
@@ -68,5 +68,5 @@ for i in range(len(section_urls)):
     fo.close()
     i =+ 1
     # For dev purposes, lets set a limit to not overwhelm server
-    if i == 1:
+    if i == 100:
         break
